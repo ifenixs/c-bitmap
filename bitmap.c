@@ -35,7 +35,7 @@ int bitmap_get(bitmap *_bitmap, int index) {
     unsigned char res;
     assert(quo <= _bitmap->size);
     res = _bitmap->map[quo] & x;
-    return res;
+    return res > 0 ? 1 : 0;
 }
 
 
